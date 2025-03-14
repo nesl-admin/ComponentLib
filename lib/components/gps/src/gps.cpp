@@ -4,8 +4,8 @@
 #define POLL_INTERVAL 300000 //5 mins
 
 //offset lat/lon to obfuscate actual position(set to 0 to go live)
-#define FUDGE_LAT 3.1234
-#define FUDGE_LON 12.4342
+#define FUDGE_LAT 37.80050649
+#define FUDGE_LON -122.40284086
 
 //RX, TX are MCU pins, not GPS (ie. MCU RX pin connects to "TX" on GPS; MCU TX to "RX" on GPS)
 SoftwareSerial ss(GPS_SERIAL_RX, GPS_SERIAL_TX);
