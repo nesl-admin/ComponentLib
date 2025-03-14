@@ -2,6 +2,8 @@
 #include <components.h>
 
 void setup() {
+  Serial.begin(115200);
+  Serial.println("Starting...");
   setup_buttons();
   setup_gps();
   setup_modbus_master();

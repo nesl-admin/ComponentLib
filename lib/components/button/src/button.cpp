@@ -23,6 +23,7 @@ void button4_pushed() {
 
 void setup_buttons() {
    pinMode(ANALOG_BTN_PIN, INPUT_PULLUP);
+   Serial.printf("button setup\n");
 }
 
 void setup_button_callbacks(void (*cb1)(), void (cb2)(), void (cb3)(), void (*cb4)()) {

@@ -542,6 +542,8 @@ void send_wakeup_msg() {
 */
 
 void setup_modem() {
+    Serial.printf("modem init\n");
+
     #ifdef LILYGO_T_SIM7080G
     /*********************************
      *  Initialize power chip,

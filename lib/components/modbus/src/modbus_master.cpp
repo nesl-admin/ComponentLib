@@ -39,7 +39,8 @@ void setup_modbus_slaves() {
 }
 
 void setup_modbus_master() {
- 
+  Serial.printf("MODBUS init\n");
+
   gpio_reset_pin(RS485_RX_1);
   gpio_reset_pin(RS485_TX_1);
   gpio_reset_pin(RS485_RX_2);
