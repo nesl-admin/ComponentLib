@@ -20,16 +20,12 @@ void idle_waiting() {
 }
 
 void setup_sht20() {
-  // int mba = get_evse_config()->modbus_addr_temp_humidity[0];
-  // if (mba != 0) {
   int mba = 1;
   b_has_SHT20 = true;
   Serial.printf("SETUP: MODBUS: SHT20 #1: address:%d\n",mba); 
   sht20.set_modbus_address(mba);
   sht20.begin(mba, _modbus1);
 }
-
-//EVC_Loop_Modbus_A_mutex1 = xSemaphoreCreateMutex();
 
 void setup_modbus_slaves() {
   //setup_thermostats();
@@ -46,7 +42,7 @@ void setup_modbus_master() {
   gpio_reset_pin(RS485_RX_2);
   gpio_reset_pin(RS485_TX_2);
 
-  _modbus1.begin(9600); //TODO move to config
+  _modbus1.begin(9600);
   _modbus2.begin(9600);
 
   setup_modbus_slaves();
